@@ -1,0 +1,129 @@
+* {
+    height: 1000px;
+    margin: 0;
+    padding: 0;
+}
+.navigation {
+    position: fixed;
+    height: 70px;
+    right: 0;
+    left: 0;
+    background-color: navy;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    -moz-box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    box-shadow: 0px 17px 59px 11px rgba(63, 0, 199, 0.62);
+    body.black &{
+        background-color: #f1f1f1;
+        transition: .3s ease all;
+    }
+}
+
+.navigation h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 15px;
+    font-family: Arial;
+    color: #1100ff;
+    background-image: -webkit-linear-gradient(
+        0deg,
+        #4d40ff 0%,
+        #466c85 46%,
+        #ff0055 86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-emphasis-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+ul {
+    position: relative;
+    height: 70px;
+    left: 810px;
+}
+
+li {
+    display: inline-block;
+    margin-left: 5px;
+    width: 90px;
+    height: 40px;
+    padding-top: 25px;
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+a {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    body.black &{
+        color: #000;
+        transition: .3s ease all;
+    }
+}
+
+a:hover {
+    background-color: #a581ff5b;
+    box-shadow: 0px 0px 400px 86px #a481ff;
+    -webkit-box-shadow: 0px 0px 400px 86px #a481ff;
+    -moz-box-shadow: 0px 0px 400px 86px #a481ff;
+    text-decoration: underline white;
+}
+
+.switch {
+    display: inline-block;
+    height: 31px;
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3s ease all;
+        box-shadow: 0px 0px 20px 2px rgba(0,0,0,.2);
+    }
+    &.active {
+        background: orange;
+        color: #000;
+        &::after {
+            right: 0;
+            left: unset;
+        }
+    }
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff;
+    }
+}
+
+.content {
+    background-color: #4d40ff;
+    body.black & {
+        background-color: #f1f1f1;
+        transition: .3s ease all;
+    }
+}
